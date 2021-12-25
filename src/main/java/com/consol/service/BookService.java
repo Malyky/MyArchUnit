@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class BookService {
 
     public void doSomething(){
-        // new WrongController(); // 4.1
+         new WrongController(); // 4.1
    //     ArchitectureUtil.callWrongController();
 
         User user;

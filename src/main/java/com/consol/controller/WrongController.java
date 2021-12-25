@@ -6,6 +6,8 @@ public class WrongController {
 
     String t;
 
+    BookService bookService;
+
     public void rofl(){
     }
 

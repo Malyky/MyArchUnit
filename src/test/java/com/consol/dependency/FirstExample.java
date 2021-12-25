@@ -7,7 +7,7 @@ import com.tngtech.archunit.lang.syntax.ArchRuleDefinition;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-@AnalyzeClasses(packages = "de.consol.controller" )
+@AnalyzeClasses(packages = "com.consol.controller" )
 public class FirstExample {
 
     @ArchTest

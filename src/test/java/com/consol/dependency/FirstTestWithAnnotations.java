@@ -22,4 +22,10 @@ public class FirstTestWithAnnotations {
 
     ).resideInAnyPackage("..service..").should().dependOnClassesThat().resideInAnyPackage("..controller..")
             .because("4.1 dependency check");
+
+    // evtl inverse mit Util zeigen
+    @ArchTest
+    public static final ArchRule controllers_should_only_accessed_by_ui =
+            classes().that().resideInAnyPackage("..controller..").should().onlyBeAccessed().byAnyPackage("..controller..", "..ui..")
+                    .because("Controller should only access by UI");
 }

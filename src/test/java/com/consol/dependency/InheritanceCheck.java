@@ -21,6 +21,8 @@ public class InheritanceCheck {
     public static final ArchRule connection_inheritance_check = classes().that().areAssignableFrom(SuperConnection.class)
             .should().haveSimpleNameEndingWith("SuperConnection");
 
+
+
    // assignableTo => Extended
 
 

@@ -12,9 +12,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 @AnalyzeClasses(packages = "com.consol.controller")
 public class NamingTest {
 
-    @ArchTest
-    public static final ArchRule controller_naming_convention =
-            ArchRuleDefinition.classes().that().resideInAnyPackage("..controller..").and().areAnnotatedWith(Controller.class)
-                    .should().haveNameMatching(".*Controller");
+/*    @ArchTest
+    public static final ArchRule controller_naming_convention = // TODO;*/
 
 }

@@ -19,5 +19,27 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 public class FirstTest {
 
+    @Test
+    public void firstTest(){
+        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.consol");
+        //new ClassFileImporter().withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS)
+        JavaClass next = new ClassFileImporter().withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS).importPackagesOf(WrongController.class).stream().iterator().next();
+
+        for (JavaClass importedClass : importedClasses) {
+            if (importedClass.getName().contains(".service")) {
+                for (JavaAccess<?> javaAccess : importedClass.getAccessesFromSelf()) {
+                    if (javaAccess.getTargetOwner().getName().contains(".controller")) {
+                        Assertions.fail("Class " + importedClass.getName() + " should not access Controller " + javaAccess.getTargetOwner().getName()); //WrongCOntroller
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+
+
 
 }

@@ -6,10 +6,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class WrongController {
 
-    String t;
+    String emptyControllerField;
 
     public void doSth(){
         BookService bookService = new BookService(); //for cycles
+        if (!emptyControllerField.isEmpty()) {
+            setEmptyControllerField("");
+        }
 
     }
 
@@ -17,7 +20,11 @@ public class WrongController {
 
     }
 
-    public String getT() {
-        return t;
+    public String getEmptyControllerField() {
+        return emptyControllerField;
+    }
+
+    public void setEmptyControllerField(String emptyControllerField) {
+        this.emptyControllerField = emptyControllerField;
     }
 }

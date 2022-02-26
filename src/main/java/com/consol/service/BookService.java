@@ -13,5 +13,6 @@ public class BookService {
    //     ArchitectureUtil.callWrongController();
 
         User user;
+        new WrongController();
     };
 }

@@ -12,9 +12,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 public class DependencyTest {
 
     @ArchTest
-    public static final ArchRule moreComplexDepenendcy =
-        classes().that().resideInAnyPackage("..foo..").should().onlyHaveDependentClassesThat().resideInAnyPackage("..source.one..")
-                .because("Foo should only access  Source One");
+    public static final ArchRule moreComplexDepenendcy = // TODO
 
 
 

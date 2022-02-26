@@ -17,14 +17,7 @@ import org.junit.jupiter.api.Test;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@AnalyzeClasses(packages = "com.consol")
 public class FirstTest {
 
-
-    @ArchTest
-    public static final ArchRule serviceControllerDependencyTest = noClasses().that().resideInAPackage("..service..").should().accessClassesThat().resideInAPackage("..controller..");
-
-    @ArchTest
-    public static final ArchRule controllerShouldOnlyBeAccessedByUI = classes().that().resideInAPackage("..controller..").should().onlyBeAccessed().byAnyPackage("..ui..", "..controller..");
 
 }

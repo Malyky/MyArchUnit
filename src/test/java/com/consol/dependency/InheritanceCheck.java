@@ -9,10 +9,9 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
 @AnalyzeClasses(packages = "com.consol.inheritance.connection")
 public class InheritanceCheck {
-
+/*
     @ArchTest
-    public static final ArchRule connection_inheritance_check = classes().that().areAssignableTo(Connection.class)
-            .should().haveSimpleNameEndingWith("Connection");
+    public static final ArchRule connection_inheritance_check = TODO*/
 
 
 }

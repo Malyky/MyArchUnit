@@ -22,7 +22,6 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 public class CustomTest {
 
 
-
     private static DescribedPredicate<JavaClass> haveFieldAnnotatedWithPayload =
             new DescribedPredicate<JavaClass>("Have a field with Annotation Payload") {
                 @Override

@@ -13,15 +13,8 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 @AnalyzeClasses(packagesOf = MyMainClass.class, importOptions = ImportOption.DoNotIncludeTests.class)
 public class LayerTest {
 
-
+/*
    @ArchTest
-    public static final ArchRule should_have_layers =
-            Architectures.layeredArchitecture()
-                    .layer("controller").definedBy("..controller..")
-                    .layer("service").definedBy("..service..")
-                    .layer("persistence").definedBy("..persistence..")
-                    .whereLayer("controller").mayNotBeAccessedByAnyLayer()
-                    .whereLayer("service").mayOnlyBeAccessedByLayers("controller")
-                    .whereLayer("persistence").mayOnlyBeAccessedByLayers("service");
+    public static final ArchRule should_have_layers = TODO*/
 
 }

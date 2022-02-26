@@ -1,0 +1,31 @@
+@startuml
+
+skinparam componentStyle uml2
+
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+skinparam class {
+BorderColor #grey
+BackgroundColor #white
+}
+
+package com.myapp.moduleone {
+class ClassOneInModuleOne
+class ClassTwoInModuleOne
+}
+package com.myapp.moduletwo {
+class ClassOneInModuleTwo
+class ClassTwoInModuleTwo
+}
+package com.myapp.modulethree {
+class ClassOneInModuleThree
+class ClassTwoInModuleThree
+}
+
+ClassOneInModuleOne --> ClassTwoInModuleTwo #crimson
+ClassOneInModuleTwo --> ClassOneInModuleThree #crimson
+ClassTwoInModuleThree --> ClassOneInModuleOne #crimson
+@enduml

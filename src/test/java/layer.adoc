@@ -1,0 +1,41 @@
+/*
+@startuml
+
+skinparam componentStyle uml2
+
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+skinparam class {
+BorderColor #grey
+BackgroundColor #white
+}
+
+package com.myapp.controller {
+class SomeControllerOne
+class SomeControllerTwo
+}
+package com.myapp.service {
+class SomeServiceOne
+class SomeServiceTwo
+}
+package com.myapp.persistence {
+class SomePersistenceManager
+}
+
+SomeControllerOne --> SomeServiceOne #green
+SomeServiceTwo -down-> SomePersistenceManager #green
+
+SomeControllerOne -down-> SomePersistenceManager #crimson
+note right on link #crimson: Access bypasses layers
+
+SomeServiceTwo -up--> SomeControllerTwo #crimson
+note right on link #crimson: Access goes against layers
+
+SomePersistenceManager -up--> SomeServiceOne #crimson
+note right on link #crimson: Access goes against layers
+
+@enduml
+*/

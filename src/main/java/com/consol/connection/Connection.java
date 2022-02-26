@@ -1,4 +1,4 @@
 package com.consol.connection;
 
-public class Connection {
+public abstract class Connection {
 }

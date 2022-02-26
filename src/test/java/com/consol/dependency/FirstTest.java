@@ -25,12 +25,13 @@ public class FirstTest {
             if (importedClass.getName().contains(".service")) {
                 for (JavaAccess<?> javaAccess : importedClass.getAccessesFromSelf()) {
                     if (javaAccess.getTargetOwner().getName().contains(".controller")) {
-                        Assertions.fail("Class should not " + importedClass.getName() + "be acceesed from " + javaAccess.getTargetOwner().getName()); //WrongCOntroller
+                        Assertions.fail("Class " + importedClass.getName() + " should not access Controller " + javaAccess.getTargetOwner().getName()); //WrongCOntroller
                     }
                 }
 
             }
         }
+
 
 
 

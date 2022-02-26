@@ -1,14 +1,16 @@
 package com.consol.controller;
 
 import com.consol.service.BookService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class WrongController {
 
     String t;
 
-    BookService bookService;
+    public void doSth(){
+        BookService bookService = new BookService(); //for cycles
 
-    public void rofl(){
     }
 
     private void foo() {

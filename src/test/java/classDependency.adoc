@@ -1,0 +1,26 @@
+/*
+@startuml
+
+skinparam componentStyle uml2
+
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+skinparam class {
+BorderColor #grey
+BackgroundColor #white
+}
+
+class Other
+class FooBar
+
+Other -> FooBar
+note top on link #crimson: forbidden
+
+Bar --> FooBar #green
+note left on link #green: allowed
+
+@enduml
+*/

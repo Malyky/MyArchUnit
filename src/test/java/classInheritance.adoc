@@ -1,0 +1,27 @@
+/*
+@startuml
+
+skinparam componentStyle uml2
+
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+skinparam class {
+BorderColor #grey
+BackgroundColor #white
+}
+
+class Connection <<interface>>
+class HtmlConnection <<concrete>>
+class FtpConnection <<concrete>>
+class SshThing <<concrete>>
+
+HtmlConnection --|> Connection #green
+FtpConnection --|> Connection #green
+SshThing --|> Connection #crimson
+@enduml
+*/
+
+in 004_what_to_check.adoc

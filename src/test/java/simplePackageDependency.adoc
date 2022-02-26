@@ -1,0 +1,15 @@
+/*
+@startuml
+
+skinparam componentStyle uml2
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+[source] --[#green]right-->  [target]:allowed
+[source] --[#crimson]left--> [foo]
+
+
+@enduml
+*/

@@ -1,0 +1,14 @@
+@startuml
+
+skinparam componentStyle uml2
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+[UI] --[#green]down-->  [controller]:allowed
+[service] --[#crimson]up-->  [controller]:forbidden
+[persistence] --[#crimson]up--> [controller]:forbidden
+
+
+@enduml

@@ -1,0 +1,28 @@
+/*
+@startuml
+
+skinparam componentStyle uml2
+
+skinparam component {
+BorderColor #grey
+BackgroundColor #white
+}
+
+skinparam class {
+BorderColor #grey
+BackgroundColor #white
+}
+
+package com.foo {
+class FooService
+}
+
+package com.wrong {
+class FooController
+}
+
+note "resides in wrong package" as WrongPackage #crimson
+FooController .. WrongPackage
+
+@enduml
+*/

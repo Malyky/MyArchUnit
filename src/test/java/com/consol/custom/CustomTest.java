@@ -13,7 +13,7 @@ import com.tngtech.archunit.lang.ArchCondition;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
-import com.tngtech.archunit.library.dependencies.SlicesRuleDefinition;
+import com.tngtech.archunit.lang.syntax.SyntaxPredicates;
 
 import java.util.Set;
 
@@ -22,15 +22,14 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 @AnalyzeClasses(packagesOf = MyMainClass.class, importOptions = ImportOption.DoNotIncludeTests.class)
 public class CustomTest {
 
- /*   @ArchTest
-    public static final ArchRule should_not_have_cycles = SlicesRuleDefinition.slices().matching("com.consol.(*)..").should().beFreeOfCycles();*/
+
 
     private static DescribedPredicate<JavaClass> haveFieldAnnotatedWithPayload =
             new DescribedPredicate<JavaClass>("Have a field with Annotation Payload") {
                 @Override
                 public boolean apply(JavaClass input) {
                     for (JavaField field : input.getAllFields()) {
-                        if(field.isAnnotatedWith(Payload.class)) {
+                        if (field.isAnnotatedWith(Payload.class)) {
                             return true;
                         }
                     }
@@ -58,7 +57,6 @@ public class CustomTest {
             ;
     @ArchTest
     public static final ArchRule ww = classes().that(haveFieldAnnotatedWithPayload).should(onlyBeAccesedBySecureMethods);
-
 
 
 }

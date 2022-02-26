@@ -7,13 +7,10 @@ import com.tngtech.archunit.lang.syntax.ArchRuleDefinition;
 import org.springframework.stereotype.Controller;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@AnalyzeClasses(packages = "com.consol.controller" )
-public class Naming {
-
-    @ArchTest
-    public static final ArchRule someRule = classes().that().resideInAPackage("..controller..")
-            .should().resideInAnyPackage("..rofl..") ;
+@AnalyzeClasses(packages = "com.consol.controller")
+public class NamingTest {
 
     @ArchTest
     public static final ArchRule controller_naming_convention =

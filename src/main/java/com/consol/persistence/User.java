@@ -4,9 +4,9 @@ import com.consol.controller.WrongController;
 
 public class User {
 
-    WrongController wrongController;
+ /*   WrongController wrongController;
 
     public void doSth() {
         wrongController.getEmptyControllerField();
-    }
+    }*/
 }

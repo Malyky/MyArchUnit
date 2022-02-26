@@ -17,29 +17,14 @@ import org.junit.jupiter.api.Test;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
+@AnalyzeClasses(packages = "com.consol")
 public class FirstTest {
 
-    @Test
-    public void firstTest(){
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.consol");
-        //new ClassFileImporter().withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS)
-        JavaClass next = new ClassFileImporter().withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS).importPackagesOf(WrongController.class).stream().iterator().next();
 
-        for (JavaClass importedClass : importedClasses) {
-            if (importedClass.getName().contains(".service")) {
-                for (JavaAccess<?> javaAccess : importedClass.getAccessesFromSelf()) {
-                    if (javaAccess.getTargetOwner().getName().contains(".controller")) {
-                        Assertions.fail("Class " + importedClass.getName() + " should not access Controller " + javaAccess.getTargetOwner().getName()); //WrongCOntroller
-                    }
-                }
+    @ArchTest
+    public static final ArchRule serviceControllerDependencyTest = noClasses().that().resideInAPackage("..service..").should().accessClassesThat().resideInAPackage("..controller..");
 
-            }
-        }
-
-
-    }
-
-
-
+    @ArchTest
+    public static final ArchRule controllerShouldOnlyBeAccessedByUI = classes().that().resideInAPackage("..controller..").should().onlyBeAccessed().byAnyPackage("..ui..", "..controller..");
 
 }

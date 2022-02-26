@@ -13,14 +13,12 @@ BackgroundColor #white
 }
 
 package com.consol.controller {
-class FooService
-}
-
-package com.consol.wrong {
+class ChooseName
 class FooController
 }
 
-note "resides in wrong package" as WrongPackage #crimson
-FooController .. WrongPackage
+
+note "has wrong Name" as WrongPackage #crimson
+ChooseName .. WrongPackage
 
 @enduml

@@ -5,9 +5,8 @@ import com.consol.controller.WrongController;
 public class ArchitectureUtil {
 
 
-    public static WrongController callWrongController() {
+/*    public static WrongController callWrongController() {
         return new WrongController();
         //return null;
-    }
-
+    }*/
 }

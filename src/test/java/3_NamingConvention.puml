@@ -14,7 +14,7 @@ BackgroundColor #white
 
 package com.consol.controller {
 class ChooseName
-class FooController
+class WrongController
 }
 
 

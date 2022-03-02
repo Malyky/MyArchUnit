@@ -11,8 +11,8 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 @AnalyzeClasses(packagesOf = MyMainClass.class)
 public class DependencyTest {
 
-    @ArchTest
-    public static final ArchRule moreComplexDepenendcy = // TODO
+/*    @ArchTest
+    public static final ArchRule moreComplexDepenendcy = // TODO*/
 
 
 

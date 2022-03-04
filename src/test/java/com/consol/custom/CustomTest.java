@@ -20,41 +20,9 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
 @AnalyzeClasses(packagesOf = MyMainClass.class, importOptions = ImportOption.DoNotIncludeTests.class)
 public class CustomTest {
-
-
-    private static DescribedPredicate<JavaClass> haveFieldAnnotatedWithPayload =
-            new DescribedPredicate<JavaClass>("Have a field with Annotation Payload") {
-                @Override
-                public boolean apply(JavaClass input) {
-                    for (JavaField field : input.getAllFields()) {
-                        if (field.isAnnotatedWith(Payload.class)) {
-                            return true;
-                        }
-                    }
-
-                    return false;
-                }
-            };
-
-
-
-    private static ArchCondition<? super JavaClass> onlyBeAccesedBySecureMethods = new ArchCondition<JavaClass>("only be accesed by secure methods") {
-        @Override
-        public void check(JavaClass item, ConditionEvents events) {
-            Set<JavaMethodCall> methodCallsToSelf = item.getMethodCallsToSelf();
-            for (JavaMethodCall javaMethodCall : methodCallsToSelf) {
-                if (!javaMethodCall.getOrigin().isAnnotatedWith(Secured.class)) {
-                    String message = String.format(
-                            "Method %s is not @Secured", javaMethodCall.getOrigin().getFullName());
-                    events.add(SimpleConditionEvent.violated(javaMethodCall, message));
-                }
-            }
-
-        }
-    }
-            ;
+    /*
     @ArchTest
-    public static final ArchRule ww = classes().that(haveFieldAnnotatedWithPayload).should(onlyBeAccesedBySecureMethods);
+    public static final ArchRule classes_with_fields_annotated_with_payloud_should_be_secured = todo*/
 
 
 }

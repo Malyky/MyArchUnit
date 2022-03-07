@@ -6,10 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 
+    User user;
     public void doSomething(){
 
         new BookController().getSomeField();
-        User user;
+        user.doSth();
     }
 
     ;

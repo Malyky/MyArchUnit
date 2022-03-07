@@ -1,6 +1,6 @@
 package com.consol.service;
 
-public class ClassWithAnnotations {
+public class CriticalPayload {
 
     @Payload
     private int myPayload;

@@ -13,7 +13,7 @@ BackgroundColor #white
 }
 
 package com.myapp.controller {
-class OtherControlle
+class OtherController
 class AnyController
 }
 package com.myapp.service {
@@ -25,7 +25,7 @@ class AnyEntity
 class OtherEntity
 }
 
-OtherControlle --> OtherService #crimson
+OtherController --> OtherService #crimson
 AnyService --> AnyEntity #crimson
-OtherEntity --> OtherControlle #crimson
+OtherEntity --> OtherController #crimson
 @enduml

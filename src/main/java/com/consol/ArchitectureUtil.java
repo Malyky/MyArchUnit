@@ -5,7 +5,7 @@ import com.consol.controller.BookController;
 public class ArchitectureUtil {
 
 
-    public static void callWrongController() {
+    public static void callBookController() {
 
     }
 

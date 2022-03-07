@@ -1,13 +1,12 @@
 package com.consol;
 
-import com.consol.controller.WrongController;
+import com.consol.controller.BookController;
 
 public class ArchitectureUtil {
 
 
-    public static WrongController callWrongController() {
-        return new WrongController();
-        //return null;
+    public static void callWrongController() {
+
     }
 
 }

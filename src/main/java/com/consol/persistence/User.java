@@ -1,12 +1,12 @@
 package com.consol.persistence;
 
-import com.consol.controller.WrongController;
+import com.consol.controller.BookController;
 
 public class User {
 
-    WrongController wrongController;
+    BookController bookController;
 
     public void doSth() {
-        wrongController.getEmptyControllerField();
+        bookController.getSomeField();
     }
 }

@@ -15,9 +15,9 @@ BackgroundColor #white
 class Connection <<abstract>>
 class HtmlConnection <<concrete>>
 class FtpConnection <<concrete>>
-class SshThing <<concrete>>
+class Ssh <<concrete>>
 
 HtmlConnection --|> Connection #green
 FtpConnection --|> Connection #green
-SshThing --|> Connection #crimson
+Ssh --|> Connection #crimson
 @enduml

@@ -26,6 +26,6 @@ class OtherEntity
 }
 
 OtherController --> OtherService #crimson
-AnyService --> AnyEntity #crimson
+OtherService --> OtherEntity #crimson
 OtherEntity --> OtherController #crimson
 @enduml
